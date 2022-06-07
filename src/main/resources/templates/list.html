@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>User List</h1>
+<div th:each="userList,userIter:${users}">
+    <p th:text="${userList.id}"></p>
+    <p th:text="${userList.name}"></p>
+    <p th:text="${userList.sex}"></p>
+    <!--循环状态变量-->
+    <p th:text="${userIter.id}"></p>
+    <p th:text="${userIter.userName}"></p>
+    <p th:text="${userIter.realName}"></p>
+    <p th:text="${userIter.passWord}"></p>
+</div>
+</body>
+</html>
